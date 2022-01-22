@@ -11,7 +11,7 @@ class Oui < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/thatmattlove/oui/releases/download/v0.0.1/oui_0.0.1_macOS_arm64.tar.gz"
-      sha256 "bc8d7bab9eb7bdc79346ce4e05fc3a66b9c0c6d69572a0d90f7fd8aa47f4287b"
+      sha256 "7a00bea1a7ee19d9a7f8ebbda35f714b71cafd420df21e15af86717669cc0f78"
 
       def install
         bin.install "oui"
@@ -19,7 +19,7 @@ class Oui < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/thatmattlove/oui/releases/download/v0.0.1/oui_0.0.1_macOS_amd64.tar.gz"
-      sha256 "d5155f7859aa184c1f2bee7eb95c45565f05171aba26c7d594a86f868edadc2e"
+      sha256 "4864feca7868d1811a7a331e0104e60fcadf48b2ef3ae7e327edf4b03014904a"
 
       def install
         bin.install "oui"
@@ -28,17 +28,17 @@ class Oui < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/thatmattlove/oui/releases/download/v0.0.1/oui_0.0.1_linux_arm64.tar.gz"
-      sha256 "6de366a142a4eb1e25addbc5337644e4324f76e1e40ec3722f7b6125654e353a"
+    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+      url "https://github.com/thatmattlove/oui/releases/download/v0.0.1/oui_0.0.1_linux_armv6.tar.gz"
+      sha256 "199860b62f65b37aa52720add0c36cbcad82e9d25201b4b57cae99713112375c"
 
       def install
         bin.install "oui"
       end
     end
-    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/thatmattlove/oui/releases/download/v0.0.1/oui_0.0.1_linux_armv6.tar.gz"
-      sha256 "5432938e14bf381ff266f759fea6e349b08cea5eae838d8923059f3ab235777e"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/thatmattlove/oui/releases/download/v0.0.1/oui_0.0.1_linux_arm64.tar.gz"
+      sha256 "50d9a9c5cb5ab30789d64afc16e4a89f0eb3aa0a47491243b3485e3900c08e83"
 
       def install
         bin.install "oui"
@@ -46,7 +46,7 @@ class Oui < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/thatmattlove/oui/releases/download/v0.0.1/oui_0.0.1_linux_amd64.tar.gz"
-      sha256 "7d8f482fb1d110a917f3f588e85a82907478e4fa612d9fca7c7e6c6e120376ce"
+      sha256 "9c558145b5e34d4ce12d0a1db4e6e75d3329228e98ed4ddf1c98e2c1775f10f3"
 
       def install
         bin.install "oui"
