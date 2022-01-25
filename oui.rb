@@ -5,21 +5,21 @@
 class Oui < Formula
   desc "MAC Address CLI Toolkit"
   homepage "https://github.com/thatmattlove/oui"
-  version "0.1.5"
+  version "0.1.6"
   license "BSD-3-Clause-Clear"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/thatmattlove/oui/releases/download/v0.1.5/oui_0.1.5_macOS_amd64.tar.gz"
-      sha256 "527b961a07feb37f8ecd6f884cf20a98bde5ac4449bb994476e29d06c89fc7d9"
+      url "https://github.com/thatmattlove/oui/releases/download/v0.1.6/oui_0.1.6_macOS_amd64.tar.gz"
+      sha256 "065b98f665f4f29901f80b725cc771ec465708e82690afe8bd39d5a506dc5fb5"
 
       def install
         bin.install "oui"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/thatmattlove/oui/releases/download/v0.1.5/oui_0.1.5_macOS_arm64.tar.gz"
-      sha256 "99e8d8702716d47aa863c26ddb141012229552690d3090c6395644d09ac164e0"
+      url "https://github.com/thatmattlove/oui/releases/download/v0.1.6/oui_0.1.6_macOS_arm64.tar.gz"
+      sha256 "7f62ce0ac5321f2cd3667649ff155e4c8f507dc0cb374abcd50c3b211fc8d444"
 
       def install
         bin.install "oui"
@@ -29,24 +29,24 @@ class Oui < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/thatmattlove/oui/releases/download/v0.1.5/oui_0.1.5_linux_arm64.tar.gz"
-      sha256 "6938502bf8ff7bbf9b8e8970b0f735145c0077ad3543004691ceecae83a02906"
+      url "https://github.com/thatmattlove/oui/releases/download/v0.1.6/oui_0.1.6_linux_arm64.tar.gz"
+      sha256 "02c2725626cddc527546d1fd39e9ba4e92423e72579ac641abfc320ae61aeb02"
 
       def install
         bin.install "oui"
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/thatmattlove/oui/releases/download/v0.1.5/oui_0.1.5_linux_armv6.tar.gz"
-      sha256 "432f98d70384be3e11599e1866c329eb441f27bb7454f704e63324ead280781f"
+      url "https://github.com/thatmattlove/oui/releases/download/v0.1.6/oui_0.1.6_linux_armv6.tar.gz"
+      sha256 "9cd5018109cc9486103695986cc9bba504d6cd8c3595a50834a45d42c9d2599c"
 
       def install
         bin.install "oui"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/thatmattlove/oui/releases/download/v0.1.5/oui_0.1.5_linux_amd64.tar.gz"
-      sha256 "535b350e9ee5990653b38610febfe8be60c648ed8d975c41f5df3ecd2ba6745f"
+      url "https://github.com/thatmattlove/oui/releases/download/v0.1.6/oui_0.1.6_linux_amd64.tar.gz"
+      sha256 "140a054da0383ffc900db678b332db3d557d100fda83934790a34be002272fbc"
 
       def install
         bin.install "oui"
