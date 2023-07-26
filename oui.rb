@@ -11,7 +11,7 @@ class Oui < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/thatmattlove/oui/releases/download/v1.0.0/oui_1.0.0_darwin_arm64.tar.gz"
-      sha256 "45cf5925aa6d51d5edf8a1915f3d58b841fa97de3b0ed18273326080c959dc59"
+      sha256 "c242789340f1d78eb34774623d681e014ca9d092e02af9ea2a913a507b31e1c0"
 
       def install
         bin.install "oui"
@@ -19,7 +19,7 @@ class Oui < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/thatmattlove/oui/releases/download/v1.0.0/oui_1.0.0_darwin_amd64.tar.gz"
-      sha256 "cd26e80c45569ce5aced00892f7226b84dbe25b4a372c74fcd45df5427264fba"
+      sha256 "03242a4263c3227f2b3f8d157ee33da0ca01f486fd9b0e5d3146aee33dab3eb6"
 
       def install
         bin.install "oui"
@@ -30,7 +30,7 @@ class Oui < Formula
   on_linux do
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
       url "https://github.com/thatmattlove/oui/releases/download/v1.0.0/oui_1.0.0_linux_armv6.tar.gz"
-      sha256 "997a115d0f931ca83973fcd39d69a71f1c2405c4a854fe03c392892af00f0a68"
+      sha256 "bccccd7d70ed9944a5fd1b4595fbbdd2f517e6711de34974174c6608356a8f65"
 
       def install
         bin.install "oui"
@@ -38,7 +38,7 @@ class Oui < Formula
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/thatmattlove/oui/releases/download/v1.0.0/oui_1.0.0_linux_arm64.tar.gz"
-      sha256 "b84ba9ec81acb2ae0ba0c79fa2405dbc83a600a8c1bccf4894b3840c878b252c"
+      sha256 "2504dcbbbd3695dce498219784568c94028e64c047ed1308714c9863428fbd94"
 
       def install
         bin.install "oui"
@@ -46,7 +46,7 @@ class Oui < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/thatmattlove/oui/releases/download/v1.0.0/oui_1.0.0_linux_amd64.tar.gz"
-      sha256 "21df3656389bee87c4460ac6f57bead0ad489948325628d4822382f534bb5fc0"
+      sha256 "5f2174ac546a27ba0a52ebb3d5c23fd4a2989d43eecedaccef0971edc66000ee"
 
       def install
         bin.install "oui"
