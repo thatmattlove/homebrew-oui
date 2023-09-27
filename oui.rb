@@ -5,21 +5,21 @@
 class Oui < Formula
   desc "MAC Address CLI Toolkit"
   homepage "https://github.com/thatmattlove/oui"
-  version "2.0.2"
+  version "2.0.3"
   license "BSD-3-Clause-Clear"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/thatmattlove/oui/releases/download/v2.0.2/oui_2.0.2_darwin_arm64.tar.gz"
-      sha256 "fb0842ba40ebeb3000e9b3c4483fcce12bf0b34dde7e03bfb349e44344081000"
+      url "https://github.com/thatmattlove/oui/releases/download/v2.0.3/oui_2.0.3_darwin_arm64.tar.gz"
+      sha256 "0837e64554be1f7932743ffe37b851d31c149764825237d7bb8e037fb88c100e"
 
       def install
         bin.install "oui"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/thatmattlove/oui/releases/download/v2.0.2/oui_2.0.2_darwin_amd64.tar.gz"
-      sha256 "c0596afa384a8abbb2e19aecf66148d651f26c48cb5ebc38d8497b06a8c3a6dc"
+      url "https://github.com/thatmattlove/oui/releases/download/v2.0.3/oui_2.0.3_darwin_amd64.tar.gz"
+      sha256 "1bd270b077a33a6334cc5654efd5f90b7a1283a1c6de9d46b247cacc5f9d8a54"
 
       def install
         bin.install "oui"
@@ -28,25 +28,25 @@ class Oui < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/thatmattlove/oui/releases/download/v2.0.2/oui_2.0.2_linux_arm64.tar.gz"
-      sha256 "12ab80ed608102d8efbef92cbaa97b5e99412345105a291f0466f4b792b64fd9"
-
-      def install
-        bin.install "oui"
-      end
-    end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/thatmattlove/oui/releases/download/v2.0.2/oui_2.0.2_linux_armv6.tar.gz"
-      sha256 "29b2556b145f787375a41e3bed5a9d6ad21ea05545d1abab8749ac19d66d5568"
+      url "https://github.com/thatmattlove/oui/releases/download/v2.0.3/oui_2.0.3_linux_armv6.tar.gz"
+      sha256 "cb1f9928b2d801186e77042bc77f14ee8e0f54e0d411e579cdf20cfef719cf43"
 
       def install
         bin.install "oui"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/thatmattlove/oui/releases/download/v2.0.2/oui_2.0.2_linux_amd64.tar.gz"
-      sha256 "6bde81eba4d90d8f69a877181d8d005e0a9158b0d792e928345f8f0416cdf1c8"
+      url "https://github.com/thatmattlove/oui/releases/download/v2.0.3/oui_2.0.3_linux_amd64.tar.gz"
+      sha256 "bb7ef8853fac8744cc6d5c972ef6c0998c48b9f041e6274df9c9a8c2af6363bf"
+
+      def install
+        bin.install "oui"
+      end
+    end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/thatmattlove/oui/releases/download/v2.0.3/oui_2.0.3_linux_arm64.tar.gz"
+      sha256 "c7cd3ae7351117a49d2d2674bbe174aac030b953b18adfc29ec08c87716a8ad1"
 
       def install
         bin.install "oui"
